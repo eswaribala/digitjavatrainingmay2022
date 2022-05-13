@@ -1,10 +1,10 @@
 package com.softura.softclinicapp.utility;
 
-import com.softura.softclinicapp.facades.EmployeeSorter;
 import com.softura.softclinicapp.models.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 
 public class App {
@@ -30,7 +30,13 @@ public class App {
             System.out.println(employeeObj);
         }
 
-        Arrays.sort(employees,new EmployeeSorter());
+        Arrays.sort(employees,new Comparator<Employee>(){
+
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return o1.getDoj().compareTo(o2.getDoj());
+            }
+        });
 
         System.out.println("After Sorting....");
         for(Employee employeeObj:employees){

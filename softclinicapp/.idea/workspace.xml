@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff616c02-d0fb-409b-a6bc-9cbee94be6d8" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/utility/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softura/softclinicapp/utility/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="ff616c02-d0fb-409b-a6bc-9cbee94be6d8" name="Changes" comment="updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +56,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,9 +77,48 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ExceptionDemo">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.App" />
+      <module name="softclinicapp.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.softura.softclinicapp.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.E" />
+      <module name="softclinicapp.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.softura.softclinicapp.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.ExceptionDemo" />
+      <module name="softclinicapp.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.softura.softclinicapp.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InnerClassDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.InnerClassDemo" />
       <module name="softclinicapp.main" />
       <extension name="coverage">
         <pattern>
@@ -121,6 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExceptionDemo" />
+        <item itemvalue="Application.E" />
+        <item itemvalue="Application.InnerClassDemo" />
         <item itemvalue="Application.App" />
         <item itemvalue="Gradle.softclinicapp [build]" />
       </list>
@@ -135,7 +170,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652272767318</updated>
       <workItem from="1652272770838" duration="9815000" />
-      <workItem from="1652358914770" duration="3269000" />
+      <workItem from="1652358914770" duration="9349000" />
+      <workItem from="1652445726449" duration="1685000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1652274886544</created>
