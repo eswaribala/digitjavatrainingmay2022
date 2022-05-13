@@ -7,22 +7,23 @@ import com.softura.softclinicapp.models.Person;
 public class ExceptionDemo {
 
     public static void main(String[] args){
-        int numerator=100;
-        int denominator=10;
-        String appName=null;
-       // Employee employee=new Patient();
-        try {
-            System.out.println(numerator / denominator);
-            System.out.println(appName.length());
-        }
-        catch(ArithmeticException ex){
-           System.out.println(ex.getMessage());
-        }
-        catch(NullPointerException ex){
-            System.out.println(ex.getMessage());
-        }
 
-        System.out.println("Testing exceptions....");
+      Employee employee=null;
+      try {
+          employee.setUserName("bala");
+          System.out.println(employee.getUserName());
+      }
+      catch(NullPointerException ex){
+          System.out.println(ex.getMessage());
+         StackTraceElement[] stackTraceElements= ex.getStackTrace();
+         for(StackTraceElement stackTraceElement:stackTraceElements){
+             System.out.println(stackTraceElement.getClassName());
+             System.out.println(stackTraceElement.getMethodName());
+             System.out.println(stackTraceElement.getLineNumber());
+             System.out.println(stackTraceElement.getFileName());
+         }
+
+      }
 
     }
 
