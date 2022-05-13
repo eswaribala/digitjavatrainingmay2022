@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class App {
-
+/*
     public static void main(String[] args){
 
         //sort the employees by username or by doj without modifying employee class
@@ -50,4 +50,6 @@ public class App {
         super.finalize();
         System.gc();
     }
+    */
+
 }
