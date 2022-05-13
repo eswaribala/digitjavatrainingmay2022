@@ -1,6 +1,7 @@
 package com.softura.softclinicapp.models;
 
 import com.softura.softclinicapp.exceptions.EmployeeValidator;
+import com.softura.softclinicapp.exceptions.UserNameException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,12 +23,14 @@ public class Employee extends Person {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(String userName) throws UserNameException{
 
         if(EmployeeValidator.validateUserName(userName))
            this.userName = userName;
         else
-            this.userName=null;
+        {
+            throw new UserNameException("User Name should be only alphabets in the range of 5 to 25 chars");
+        }
     }
 
     public String getPassword() {

@@ -70,13 +70,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ExceptionDemo">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.App" />
@@ -171,7 +172,7 @@
       <updated>1652272767318</updated>
       <workItem from="1652272770838" duration="9815000" />
       <workItem from="1652358914770" duration="9349000" />
-      <workItem from="1652445726449" duration="2963000" />
+      <workItem from="1652445726449" duration="4366000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1652274886544</created>

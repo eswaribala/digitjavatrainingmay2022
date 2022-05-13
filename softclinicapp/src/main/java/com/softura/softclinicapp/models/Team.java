@@ -1,5 +1,6 @@
 package com.softura.softclinicapp.models;
 
+import com.softura.softclinicapp.facades.TestInterface;
 import lombok.Data;
 
 //outer class
@@ -9,6 +10,8 @@ public class Team {
     private static String clinicName;
 
     private boolean active;
+
+
 
 //kind of lazy loading
     public void PreTestsICU(){
@@ -31,7 +34,7 @@ public class Team {
 
     //static inner class
 
-   public static class Surgeon{
+   public class Surgeon  implements TestInterface {
 
        private boolean active;
        public Surgeon(){
@@ -44,5 +47,9 @@ public class Team {
            clinicName="Global Hospital";
        }
 
-    }
+       @Override
+       public void test() {
+
+       }
+   }
 }

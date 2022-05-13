@@ -24,4 +24,9 @@ public class LocationService extends LocationFacade implements Runnable,TestInte
     public void run() {
 
     }
+
+    @Override
+    public void test() {
+
+    }
 }
