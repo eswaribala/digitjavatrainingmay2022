@@ -75,23 +75,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/digitjavatrainingmay2022/intellijprojects/softclinicapp/src/main/resources",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.FileDemo">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.App" />
-      <module name="softclinicapp.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.softura.softclinicapp.utility.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\digitjavatrainingmay2022\intellijprojects\softclinicapp\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FileApp">
     <configuration name="E" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.E" />
       <module name="softclinicapp.main" />
@@ -107,6 +100,19 @@
     </configuration>
     <configuration name="ExceptionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.ExceptionDemo" />
+      <module name="softclinicapp.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.softura.softclinicapp.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.softura.softclinicapp.utility.FileApp" />
       <module name="softclinicapp.main" />
       <extension name="coverage">
         <pattern>
@@ -146,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileApp" />
         <item itemvalue="Application.FileDemo" />
         <item itemvalue="Application.ExceptionDemo" />
         <item itemvalue="Application.E" />
         <item itemvalue="Application.InnerClassDemo" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +170,8 @@
       <updated>1652272767318</updated>
       <workItem from="1652272770838" duration="9815000" />
       <workItem from="1652358914770" duration="9349000" />
-      <workItem from="1652445726449" duration="8384000" />
+      <workItem from="1652445726449" duration="9151000" />
+      <workItem from="1652704941794" duration="2769000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1652274886544</created>
