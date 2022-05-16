@@ -9,23 +9,20 @@ import java.io.IOException;
 
 public class FileApp {
 
-    public static  void main(String[] args) {
+    static void WriteContents(){
         Employee[] employees=new Employee[100];
         Employee employee=null;
         EmployeeDao employeeDao;
         for(int i=0;i<100;i++) {
 
-                employee = new Employee();
-                employee.setUserName("employee" + i);
-                employee.setPassword("Test@1213");
-               employees[i]=employee;
-
-
-
+            employee = new Employee();
+            employee.setUserName("employee" + i);
+            employee.setPassword("Test@1213");
+            employees[i]=employee;
         }
 
         for(Employee employeeObj : employees){
-             System.out.println(employeeObj);
+            System.out.println(employeeObj);
         }
 
 
@@ -40,7 +37,17 @@ public class FileApp {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public static  void main(String[] args) {
+
+      //reading
+        EmployeeDao employeeDao=new EmployeeImpl();
+        try {
+            employeeDao.getEmployees();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

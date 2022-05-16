@@ -3,10 +3,8 @@ package com.softura.softclinicapp.dao;
 import com.softura.softclinicapp.models.Employee;
 import com.softura.softclinicapp.utility.FileHelper;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class EmployeeImpl implements EmployeeDao{
 
@@ -27,6 +25,32 @@ public class EmployeeImpl implements EmployeeDao{
             //bufferedWriter.write(employee.getEmail() + "\n");
         }
         bufferedWriter.close();
+
+
+
+    }
+
+    @Override
+    public void getEmployees() throws IOException {
+
+        file=FileHelper.generateFile();
+
+        BufferedReader bufferedReader=new BufferedReader(new FileReader(file));
+
+        String line=null;
+        StringTokenizer tokenizer=null;
+
+        while((line=bufferedReader.readLine())!=null){
+
+            tokenizer=new StringTokenizer(line,",");
+
+            while(tokenizer.hasMoreElements()){
+                System.out.println(tokenizer.nextElement());
+            }
+
+        }
+
+        bufferedReader.close();
 
 
 
