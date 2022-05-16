@@ -31,6 +31,18 @@ public class EmployeeImpl implements EmployeeDao{
     }
 
     @Override
+    public void addEmployeeObjects(Employee[] employees) throws IOException {
+        file=FileHelper.generateObjectFile();
+        ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream(file));
+        for(Employee employee:employees){
+           objectOutputStream.writeObject(employee);
+        }
+        objectOutputStream.close();
+
+
+    }
+
+    @Override
     public void getEmployees() throws IOException {
 
         file=FileHelper.generateFile();
@@ -54,5 +66,29 @@ public class EmployeeImpl implements EmployeeDao{
 
 
 
+    }
+
+    @Override
+    public Employee[] getEmployeeObjects() throws IOException {
+        file=FileHelper.generateObjectFile();
+        ObjectInputStream objectInputStream=new ObjectInputStream(new FileInputStream(file));
+        Employee employee=null;
+        Object obj=null;
+        Employee[] employees=new Employee[100];
+        int i=0;
+        try {
+        while((obj= objectInputStream.readObject())!=null){
+
+               employee= (Employee) obj;
+               employees[i]=employee;
+               i++;
+            }
+        } catch (ClassNotFoundException|EOFException e) {
+
+        }
+        finally {
+            objectInputStream.close();
+        }
+        return employees;
     }
 }

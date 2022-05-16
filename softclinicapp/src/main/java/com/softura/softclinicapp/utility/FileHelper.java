@@ -15,6 +15,7 @@ public class FileHelper {
         resourceBundle=ResourceBundle.getBundle("healthcare");
         String fileName=resourceBundle.getString("fileName");
         String folderName=resourceBundle.getString("folderName");
+
         File dir=new File(folderName);
         if(!dir.exists())
             dir.mkdir();
@@ -22,7 +23,31 @@ public class FileHelper {
          if(!file.exists())
              file.createNewFile();
 
+
+
+
         return new File(folderName,fileName);
+
+    }
+
+
+    public static File generateObjectFile() throws IOException {
+
+        resourceBundle=ResourceBundle.getBundle("healthcare");
+
+        String folderName=resourceBundle.getString("folderName");
+        String objectFileName=resourceBundle.getString("objectFileName");
+        File dir=new File(folderName);
+        if(!dir.exists())
+            dir.mkdir();
+        File file=new File(folderName,objectFileName);
+        if(!file.exists())
+            file.createNewFile();
+        File objectFile=new File(folderName,objectFileName);
+
+
+
+        return new File(folderName,objectFileName);
 
     }
 
