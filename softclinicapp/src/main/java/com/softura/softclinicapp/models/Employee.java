@@ -11,6 +11,7 @@ import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Employee extends Person {
 
 
@@ -18,19 +19,19 @@ public class Employee extends Person {
     private String password;
     private Department department;
     private LocalDate doj;
-
+/*
     public String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) throws UserNameException{
+    public void setUserName(String userName) {
 
-        if(EmployeeValidator.validateUserName(userName))
+       // if(EmployeeValidator.validateUserName(userName))
            this.userName = userName;
-        else
-        {
-            throw new UserNameException("User Name should be only alphabets in the range of 5 to 25 chars");
-        }
+     //   else
+     //   {
+           // throw new UserNameException("User Name should be only alphabets in the range of 5 to 25 chars");
+    //    }
     }
 
     public String getPassword() {
@@ -57,10 +58,10 @@ public class Employee extends Person {
         this.doj = doj;
     }
 
-    @Override
-    public void onBoarding() {
 
-    }
+*/
+@Override
+public void onBoarding() {
 
-
+}
 }

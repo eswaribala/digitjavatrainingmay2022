@@ -10,22 +10,34 @@ import java.io.IOException;
 public class FileApp {
 
     public static  void main(String[] args) {
+        Employee[] employees=new Employee[100];
         Employee employee=null;
         EmployeeDao employeeDao;
-        try
-        {
-            employee=new Employee();
-            employee.setUserName("eswaribala");
-            employee.setPassword("Test@1213");
-            employee.setEmail("param@gmail.com");
-            employee.setAdharCard("A2123324");
-            employeeDao=new EmployeeImpl();
-            employeeDao.addEmployee(employee);
+        for(int i=0;i<100;i++) {
+
+                employee = new Employee();
+                employee.setUserName("employee" + i);
+                employee.setPassword("Test@1213");
+               employees[i]=employee;
+
+
 
         }
-        catch(UserNameException ex){
 
-        } catch (IOException e) {
+        for(Employee employeeObj : employees){
+             System.out.println(employeeObj);
+        }
+
+
+
+
+        try
+        {
+            employeeDao=new EmployeeImpl();
+            employeeDao.addEmployees(employees);
+        }
+
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
 

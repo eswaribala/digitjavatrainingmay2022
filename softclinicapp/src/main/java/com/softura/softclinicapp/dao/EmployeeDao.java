@@ -6,6 +6,6 @@ import java.io.IOException;
 
 public interface EmployeeDao {
 
-    void addEmployee(Employee employee) throws IOException;
+    void addEmployees(Employee[] employees) throws IOException;
 
 }

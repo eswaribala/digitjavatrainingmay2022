@@ -15,14 +15,17 @@ public class EmployeeImpl implements EmployeeDao{
    private BufferedWriter bufferedWriter;
 
     @Override
-    public void addEmployee(Employee employee) throws IOException {
+    public void addEmployees(Employee[] employees) throws IOException {
 
         file= FileHelper.generateFile();
         bufferedWriter=new BufferedWriter(new FileWriter(file));
-        bufferedWriter.write(employee.getUserName()+",");
-        bufferedWriter.write(employee.getPassword()+",");
-        bufferedWriter.write(employee.getAdharCard()+",");
-        bufferedWriter.write(employee.getEmail()+"\n");
+        for(Employee employee : employees) {
+
+            bufferedWriter.write(employee.getUserName() + ",");
+            bufferedWriter.write(employee.getPassword() + "\n");
+          //  bufferedWriter.write(employee.getAdharCard() + ",");
+            //bufferedWriter.write(employee.getEmail() + "\n");
+        }
         bufferedWriter.close();
 
 
