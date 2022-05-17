@@ -9,8 +9,10 @@ public class Quiz  implements Runnable{
 
     @Override
     public void run() {
-      for(Question question : QAHelper.sendQuestions()){
 
+
+      for(Question question : QAHelper.sendQuestions()){
+          System.out.println(Thread.currentThread().isAlive());
           try {
               System.out.print(question.getQuestionNo());
               System.out.println(question.getQuestionText());

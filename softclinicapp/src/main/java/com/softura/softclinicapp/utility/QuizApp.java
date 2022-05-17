@@ -12,6 +12,9 @@ public class QuizApp {
         //child thread
         Thread thread =new Thread(quiz);
         thread.start();
+        System.out.println("Thread Priority"+thread.getPriority());
+        thread.setPriority(10);
+        System.out.println("Thread Priority"+thread.getPriority());
         try {
             thread.join();
         } catch (InterruptedException e) {
