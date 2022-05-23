@@ -21,7 +21,8 @@ public class SimulationThread implements Runnable{
 		{
 			this.vehicle.vehicleMessage(regNo);
 		}
-		
+		// code beyond this not synchronized
+
 		
 	}
 
