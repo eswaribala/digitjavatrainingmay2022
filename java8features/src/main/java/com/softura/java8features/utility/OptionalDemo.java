@@ -14,7 +14,8 @@ public class OptionalDemo {
         names.add("Jayan");
         names.add("Subbu");
 
-     String result=  names.stream().filter(n->n.startsWith("B")).findFirst().orElse(null);
+        //null pointer object pattern
+     Optional<String> result=  names.stream().filter(n->n.startsWith("B")).findFirst();
 
 
 
