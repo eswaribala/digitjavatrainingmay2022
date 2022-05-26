@@ -1,9 +1,6 @@
 package com.softura.springcoredemo.utility;
 
-import com.softura.springcoredemo.models.Prescription;
-import com.softura.springcoredemo.models.Report;
-import com.softura.springcoredemo.models.Surgery;
-import com.softura.springcoredemo.models.Treatment;
+import com.softura.springcoredemo.models.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,7 +11,19 @@ public static void main(String[] args){
     ApplicationContext ctx=new ClassPathXmlApplicationContext(
             "spring-annotation.xml");
      Report report= (Report) ctx.getBean("report");
+    DBRepository dbRepository1= (DBRepository) ctx.getBean("dbRepository");
+    dbRepository1.setSchemaName("Soturadb");
+    DBRepository dbRepository2= (DBRepository) ctx.getBean("dbRepository");
+    dbRepository2.setSchemaName("DigitalOceanDB");
 
+    //lambda with spring
+    DataRepository dataRepository=(prescription)->{
+        System.out.println(prescription);
+    };
+
+    dataRepository.write(new Prescription());
+
+    System.out.println(dbRepository1.getSchemaName());
 
     ApplicationContext applicationContext=new
             AnnotationConfigApplicationContext(Surgery.class);

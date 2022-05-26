@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Health Hospital</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+
+</head>
+<body>
+ <header class="header">
+    <figure>
+        <img class="logo" src="images/logo.png"/>
+    </figure>
+     <h1 class="multicolortext">Global Health Hospital</h1>
+     <figure>
+         <img class="banner" src="images/banner.jpg"/>
+     </figure>
+ </header>
+<form class="form" method="post"  action="#" th:action="@{/login}" th:object="${userAccount}" >
+    <fieldset>
+        <legend>Login</legend>
+    <input type="text"  th:field="*{userName}" placeholder="username"/>
+    <br/>
+    <input type="password"  th:field="*{password}" placeholder="password"/>
+    <br/>
+    <input type="submit" value="login"/>
+    </fieldset>
+</form>
+
+</body>
+</html>
