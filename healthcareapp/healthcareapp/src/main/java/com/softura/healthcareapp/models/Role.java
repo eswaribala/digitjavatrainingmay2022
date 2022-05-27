@@ -1,5 +1,6 @@
 package com.softura.healthcareapp.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,8 +11,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserAccount {
-    private String userName;
-    private String password;
-    private List<Role> roles;
+
+public class Role {
+
+    private int roleId;
+
+    private String roleName;
+
+    private List<UserAccount> userList;
+
 }
