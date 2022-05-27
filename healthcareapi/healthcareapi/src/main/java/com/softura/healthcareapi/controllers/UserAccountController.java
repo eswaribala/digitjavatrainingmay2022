@@ -35,11 +35,11 @@ public class UserAccountController {
         return this.userAccountService.getAllUserAccount();
     }
     @GetMapping({"/v1.0/{userName}"})
-    public ResponseEntity<String> getUserByUserName(@PathVariable("userName") String userName){
+    public ResponseEntity<?> getUserByUserName(@PathVariable("userName") String userName){
         UserAccount userAccountObj=this.userAccountService.getUserAccountByName(userName);
-        Gson gson=new Gson();
+
         if(userAccountObj!=null)
-            return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(userAccountObj));
+            return ResponseEntity.status(HttpStatus.OK).body(userAccountObj);
         else
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User Account Not Available");
     }

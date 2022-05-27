@@ -1,5 +1,7 @@
 package com.softura.healthcareapi.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,8 +25,8 @@ public class Role {
     @Column(name="Role_Name",length = 50)
     private String roleName;
     @ManyToMany(mappedBy = "roles")
-    @JsonIgnore
     @ApiModelProperty(hidden = true)
+    @JsonBackReference
     private List<UserAccount> userList;
 
 }
