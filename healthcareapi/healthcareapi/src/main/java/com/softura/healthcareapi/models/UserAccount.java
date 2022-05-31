@@ -18,16 +18,18 @@ import java.util.List;
 public class UserAccount {
 
     @Id
-    @Column(name="User_Name", length = 50)
+    @Column(name="User_Name",length = 50)
     private String userName;
-    @Column(name="Password", length = 8)
+    @Column(name="Password", nullable = false)
     private String password;
-    @ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    @ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     @JsonProperty("roles")
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-    @JsonManagedReference
     private List<Role> roles;
+
+
+
 }

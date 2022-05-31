@@ -1,5 +1,5 @@
 package com.softura.healthcareapi.controllers;
-
+/*
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -21,6 +21,7 @@ public class UserAccountController {
 
     //create the user
     @PostMapping({"/v1.0"})
+    @CrossOrigin("*")
     public ResponseEntity<String> addUserAccount(@RequestBody UserAccount userAccount){
 
         UserAccount userAccountObj=this.userAccountService.addUserAccount(userAccount);
@@ -53,3 +54,4 @@ public class UserAccountController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User Account Not Available");
     }
 }
+*/

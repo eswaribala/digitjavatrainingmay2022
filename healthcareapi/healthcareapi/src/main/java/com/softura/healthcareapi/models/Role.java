@@ -21,12 +21,18 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Role_Id")
-    private int roleId;
-    @Column(name="Role_Name",length = 50)
+    private long roleId;
+
+
+    @Column(name="Role_Name",nullable = false)
     private String roleName;
+
     @ManyToMany(mappedBy = "roles")
-    @ApiModelProperty(hidden = true)
-    @JsonBackReference
-    private List<UserAccount> userList;
+    private List<UserAccount> users;
+
+    public Role(String role) {
+        this.roleName = role;
+    }
+
 
 }

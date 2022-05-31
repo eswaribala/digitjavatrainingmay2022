@@ -44,6 +44,10 @@ dependencies {
 	implementation group: 'com.google.guava', name: 'guava', version: '19.0'
 // https://mvnrepository.com/artifact/org.apache.commons/commons-pool2
 	implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.9.0'
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'
+	implementation  group: 'io.jsonwebtoken', name:'jjwt', version:'0.8.0'
 }
 
 tasks.named('test') {

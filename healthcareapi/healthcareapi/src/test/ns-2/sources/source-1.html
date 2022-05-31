@@ -1,0 +1,213 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > UserAccountSwaggerConfiguration</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.softura.healthcareapi.configurations</a>
+</div>
+
+<h1>Coverage Summary for Class: UserAccountSwaggerConfiguration (com.softura.healthcareapi.configurations)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UserAccountSwaggerConfiguration</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (30/30)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">UserAccountSwaggerConfiguration$$EnhancerBySpringCGLIB$$75f36656</td>
+  </tr>
+  <tr>
+    <td class="name">UserAccountSwaggerConfiguration$$EnhancerBySpringCGLIB$$75f36656$$FastClassBySpringCGLIB$$dddef7e6</td>
+  </tr>
+  <tr>
+    <td class="name">UserAccountSwaggerConfiguration$$FastClassBySpringCGLIB$$fb6c17ff</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (30/30)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.softura.healthcareapi.configurations;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import java.util.Collections;
+<i class="no-highlight">4</i>&nbsp;import java.util.Date;
+<i class="no-highlight">5</i>&nbsp;import java.util.List;
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;import com.google.common.collect.Lists;
+<i class="no-highlight">8</i>&nbsp;import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+<i class="no-highlight">9</i>&nbsp;import org.springframework.context.annotation.Bean;
+<i class="no-highlight">10</i>&nbsp;import org.springframework.context.annotation.Configuration;
+<i class="no-highlight">11</i>&nbsp;import org.springframework.context.annotation.Import;
+<i class="no-highlight">12</i>&nbsp;import org.springframework.data.domain.Pageable;
+<i class="no-highlight">13</i>&nbsp;import org.springframework.http.ResponseEntity;
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;
+<i class="no-highlight">16</i>&nbsp;import springfox.documentation.builders.PathSelectors;
+<i class="no-highlight">17</i>&nbsp;import springfox.documentation.builders.RequestHandlerSelectors;
+<i class="no-highlight">18</i>&nbsp;import springfox.documentation.service.ApiInfo;
+<i class="no-highlight">19</i>&nbsp;import springfox.documentation.service.ApiKey;
+<i class="no-highlight">20</i>&nbsp;import springfox.documentation.service.AuthorizationScope;
+<i class="no-highlight">21</i>&nbsp;import springfox.documentation.service.Contact;
+<i class="no-highlight">22</i>&nbsp;import springfox.documentation.service.SecurityReference;
+<i class="no-highlight">23</i>&nbsp;import springfox.documentation.spi.DocumentationType;
+<i class="no-highlight">24</i>&nbsp;import springfox.documentation.spi.service.contexts.SecurityContext;
+<i class="no-highlight">25</i>&nbsp;import springfox.documentation.spring.web.plugins.Docket;
+<i class="no-highlight">26</i>&nbsp;import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
+<i class="no-highlight">27</i>&nbsp;@Configuration
+<i class="no-highlight">28</i>&nbsp;@EnableSwagger2WebMvc
+<i class="no-highlight">29</i>&nbsp;@Import(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration.class)
+<b class="fc"><i class="no-highlight">30</i>&nbsp;public class UserAccountSwaggerConfiguration {</b>
+<i class="no-highlight">31</i>&nbsp;	 public static final String AUTHORIZATION_HEADER = &quot;Authorization&quot;;
+<i class="no-highlight">32</i>&nbsp;	 public static final String DEFAULT_INCLUDE_PATTERN = &quot;/api/.*&quot;;
+<i class="no-highlight">33</i>&nbsp;	 
+<i class="no-highlight">34</i>&nbsp;    @Bean
+<i class="no-highlight">35</i>&nbsp;    @ConditionalOnClass(Docket.class)
+<i class="no-highlight">36</i>&nbsp;    public Docket api10Docket() {
+<b class="fc"><i class="no-highlight">37</i>&nbsp;        return new Docket(DocumentationType.SWAGGER_2)</b>
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        		.groupName(&quot;useraccount-api-1.0&quot;)</b>
+<b class="fc"><i class="no-highlight">39</i>&nbsp;                .select()</b>
+<b class="fc"><i class="no-highlight">40</i>&nbsp;                .apis(RequestHandlerSelectors</b>
+<b class="fc"><i class="no-highlight">41</i>&nbsp;                        .basePackage(&quot;com.softura.healthcareapi&quot;))</b>
+<b class="fc"><i class="no-highlight">42</i>&nbsp;                .paths(PathSelectors.regex(&quot;/userAccounts/v1.0.*&quot;))</b>
+<b class="fc"><i class="no-highlight">43</i>&nbsp;                .build()</b>
+<b class="fc"><i class="no-highlight">44</i>&nbsp;                .apiInfo(getApiInfo())</b>
+<b class="fc"><i class="no-highlight">45</i>&nbsp;                .forCodeGeneration(true)</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;                .genericModelSubstitutes(ResponseEntity.class)</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;                .ignoredParameterTypes(Pageable.class)</b>
+<b class="fc"><i class="no-highlight">48</i>&nbsp;                .ignoredParameterTypes(java.sql.Date.class)</b>
+<b class="fc"><i class="no-highlight">49</i>&nbsp;                .directModelSubstitute(java.time.LocalDate.class, java.sql.Date.class)</b>
+<b class="fc"><i class="no-highlight">50</i>&nbsp;                .directModelSubstitute(java.time.ZonedDateTime.class, Date.class)</b>
+<b class="fc"><i class="no-highlight">51</i>&nbsp;                .directModelSubstitute(java.time.LocalDateTime.class, Date.class)</b>
+<b class="fc"><i class="no-highlight">52</i>&nbsp;                .securityContexts(Lists.newArrayList(securityContext()))</b>
+<b class="fc"><i class="no-highlight">53</i>&nbsp;                .securitySchemes(Lists.newArrayList(apiKey()))</b>
+<b class="fc"><i class="no-highlight">54</i>&nbsp;                .useDefaultResponseMessages(false);</b>
+<i class="no-highlight">55</i>&nbsp;    }
+<i class="no-highlight">56</i>&nbsp;    
+<i class="no-highlight">57</i>&nbsp;    
+<i class="no-highlight">58</i>&nbsp;    private ApiInfo getApiInfo() {
+<b class="fc"><i class="no-highlight">59</i>&nbsp;        return new ApiInfo(</b>
+<i class="no-highlight">60</i>&nbsp;                &quot;User Account API&quot;,
+<i class="no-highlight">61</i>&nbsp;                &quot;App to demonstrate API Documentation&quot;,
+<i class="no-highlight">62</i>&nbsp;                &quot;0.0.1-SNAPSHOT&quot;,
+<i class="no-highlight">63</i>&nbsp;                &quot;Terms of Service&quot;,
+<i class="no-highlight">64</i>&nbsp;                new Contact(&quot;Parameswari&quot;,
+<i class="no-highlight">65</i>&nbsp;                        &quot;https://blog.eswari.in&quot;,
+<i class="no-highlight">66</i>&nbsp;                        &quot;parameswaribala@gmail.com&quot;),
+<i class="no-highlight">67</i>&nbsp;                &quot;OSS License&quot;,
+<i class="no-highlight">68</i>&nbsp;                &quot;https://blog.eswari.in&quot;,
+<b class="fc"><i class="no-highlight">69</i>&nbsp;                Collections.emptyList());</b>
+<i class="no-highlight">70</i>&nbsp;    }
+<i class="no-highlight">71</i>&nbsp;    
+<i class="no-highlight">72</i>&nbsp;    private ApiKey apiKey() {
+<b class="fc"><i class="no-highlight">73</i>&nbsp;        return new ApiKey(&quot;JWT&quot;, AUTHORIZATION_HEADER, &quot;header&quot;);</b>
+<i class="no-highlight">74</i>&nbsp;    }
+<i class="no-highlight">75</i>&nbsp;
+<i class="no-highlight">76</i>&nbsp;    private SecurityContext securityContext() {
+<b class="fc"><i class="no-highlight">77</i>&nbsp;        return SecurityContext.builder()</b>
+<b class="fc"><i class="no-highlight">78</i>&nbsp;            .securityReferences(defaultAuth())</b>
+<b class="fc"><i class="no-highlight">79</i>&nbsp;            .forPaths(PathSelectors.regex(DEFAULT_INCLUDE_PATTERN))</b>
+<b class="fc"><i class="no-highlight">80</i>&nbsp;            .build();</b>
+<i class="no-highlight">81</i>&nbsp;    }
+<i class="no-highlight">82</i>&nbsp;
+<i class="no-highlight">83</i>&nbsp;    List&lt;SecurityReference&gt; defaultAuth() {
+<b class="fc"><i class="no-highlight">84</i>&nbsp;        AuthorizationScope authorizationScope</b>
+<i class="no-highlight">85</i>&nbsp;            = new AuthorizationScope(&quot;global&quot;, &quot;accessEverything&quot;);
+<b class="fc"><i class="no-highlight">86</i>&nbsp;        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];</b>
+<b class="fc"><i class="no-highlight">87</i>&nbsp;        authorizationScopes[0] = authorizationScope;</b>
+<b class="fc"><i class="no-highlight">88</i>&nbsp;        return Lists.newArrayList(</b>
+<i class="no-highlight">89</i>&nbsp;            new SecurityReference(&quot;JWT&quot;, authorizationScopes));
+<i class="no-highlight">90</i>&nbsp;    }
+<i class="no-highlight">91</i>&nbsp;}
+<i class="no-highlight">92</i>&nbsp;
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-31 11:14</div>
+</div>
+</body>
+</html>

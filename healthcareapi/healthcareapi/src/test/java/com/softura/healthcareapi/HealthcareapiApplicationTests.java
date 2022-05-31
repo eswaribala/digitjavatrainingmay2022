@@ -1,5 +1,6 @@
 package com.softura.healthcareapi;
 
+/*
 import com.softura.healthcareapi.models.UserAccount;
 
 
@@ -46,13 +47,13 @@ class HealthcareapiApplicationTests {
 		assertNotNull(userAccount);
 
 	}
-	/*
 	@Test
 	void userAccountUserNameLengthShouldBeAbove5Chars(){
 
 		assertTrue(userAccount.getUserName().length()>0);
 	}
-*/
+
+
 
 	@ParameterizedTest
 	@ValueSource(strings = { "user1", "user84587", "test485874" })
@@ -61,10 +62,10 @@ class HealthcareapiApplicationTests {
       userAccount.setUserName(userName);
 	  assertTrue(userAccount.getUserName().startsWith("u"));
 	}
-	/*
+
 	@ParameterizedTest
 
-	@CsvFileSource(resources = "testdata.csv", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/testdata.csv", numLinesToSkip = 1)
 
 	void userAccountPasswordMustContainSpecialCharacter(String password){
 
@@ -72,7 +73,7 @@ class HealthcareapiApplicationTests {
 		assertTrue(userAccount.getPassword().contains("@")||userAccount.getPassword().contains("!"));
 	}
 
-	 */
+
 
 	//transactions
 	//test db level transaction
@@ -98,3 +99,4 @@ class HealthcareapiApplicationTests {
 
 
 }
+*/
